@@ -21,7 +21,7 @@ An example handlebars template
 
     {% load static from staticfiles %}
 
-    <img src='{% static 'a.png' %} />
+    <img src="{% static 'a.png' %}" />
 
     <p>Hello {{ name }}!</p>
 
@@ -29,4 +29,4 @@ An example handlebars template
 
 compiles into
 
-    (function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["a.bar"]=a(function(a,b,c,d,e){c=c||a.helpers;var f="",g,h,i="function",j=this.escapeExpression;return f+="\n\n<img src='/static/a.png />\n\n<p>Hello ",h=c.name,h?g=h.call(b,{hash:{}}):(g=b.name,g=typeof g===i?g():g),f+=j(g)+"!</p>\n\n<p>Go <a href='/'>home</a>!</p>",f})})()
+    (function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["a.bar"]=a(function(a,b,c,d,e){c=c||a.helpers;var f="",g,h,i="function",j=this.escapeExpression;return f+="\n\n<img src="/static/a.png" />\n\n<p>Hello ",h=c.name,h?g=h.call(b,{hash:{}}):(g=b.name,g=typeof g===i?g():g),f+=j(g)+"!</p>\n\n<p>Go <a href='/'>home</a>!</p>",f})})()
